@@ -25,7 +25,7 @@ namespace Sharp_Encrypting
                     input = Console.ReadLine();
                 }
             }while(trip_meter > 0);
-            return " ";
+            return input.ToLower();
         }
     }
 }
