@@ -60,8 +60,8 @@ namespace Sharp_Encrypting
                 key = key.Substring(0, input.Length);
             } 
             string check_res = Encr_vigener(input,key,lat_alpha);
-            Console.WriteLine($"Encryptet messsage - {check_res}");
-            Console.WriteLine($"Decryptet message - {Decr_vigener(check_res,key,lat_alpha)}");
+            Console.WriteLine($"\nEncryptet messsage - {check_res}");
+            Console.WriteLine($"\nDecryptet message - {Decr_vigener(check_res,key,lat_alpha)}");
 
 
 
@@ -70,10 +70,9 @@ namespace Sharp_Encrypting
         static string Encr_vigener(string input,string key, Dictionary<int,char> lat_alpha)
         {
             string result_encr = "";
-            int encr_key = 0;
-
             for(int i = 0; i < input.Length; i++)
             {   
+                int encr_key = 0;   
                 foreach(KeyValuePair<int,char> keyvalue in lat_alpha)
                 {
                     if(input[i] == keyvalue.Value)
